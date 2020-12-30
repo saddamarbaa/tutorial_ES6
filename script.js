@@ -198,3 +198,19 @@ function addAllParams(...myParams) {
 console.log(addAllParams(1)); /* Output: 1 */
 console.log(addAllParams(1, 2, 3, 4)); /* Output: 10 */
 console.log(addAllParams(5, 5, 5, 5, 5)); /* Output: 25 */
+
+// [New String Methods - startsWith, endsWith]
+//startsWith => string.startsWith(search string,position = 0)
+//endsWith => string.endsWith(search string, end position =string.length)
+
+let hisName = "Ali Adam Mohhhmed";
+var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+console.log(hisName.startsWith("a"));
+console.log(hisName.startsWith("A"));
+console.log(hisName.startsWith("a", 3));
+console.log(hisName.startsWith("A", 10));
+console.log(hisName.endsWith("h"));
+console.log(hisName.endsWith("d", hisName.length));
+console.log(hisName.endsWith("Mohhhmed", hisName.length - 1));
+console.log(hisName.endsWith("i", 3));

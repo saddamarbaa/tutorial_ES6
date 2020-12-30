@@ -59,3 +59,39 @@ console.log(name);
   return a + param;
 }
 */
+
+// Regular function with No Paramters
+const regularTestOne = function () {
+  return 7;
+};
+
+// arrow with No Paramters
+const arrawtestOne = () => 8;
+const arrawTestTwo = (_) => 14;
+
+console.log(regularTestOne());
+
+console.log(arrawtestOne());
+console.log(arrawTestTwo());
+
+// Regular function with one Paramters
+const regularTestTwo = function (param1) {
+  return param1 * 7;
+};
+
+// arrow function with one Paramters
+const arrawTestThree = (param1) => param1 * 7;
+
+console.log(regularTestTwo(5));
+console.log(arrawTestThree(5));
+
+// Regular function with Multiple Paramters
+const regularTesThree = function (param1, param2) {
+  return param1 * param2;
+};
+
+// arrow function with Multiple Paramters
+const arrawTestFour = (param1, param2) => param1 * param2;
+
+console.log(regularTesThree(5, 5));
+console.log(arrawTestFour(10, 5));

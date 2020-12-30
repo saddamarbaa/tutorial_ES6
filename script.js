@@ -308,3 +308,19 @@ const [one, , three] = food;
 // );
 
 console.log(`the foods I love Most are ${one} , ${three} `);
+
+// Destructuring Array Part 2
+
+const food2 = ["Burger", "Pizza", "chicken", ["Apple", "Banana", "Mango"]];
+
+// const [firstFood, secondFood, thirdFood, [f1, f2, f3]] = food2;
+
+// console.log(
+//   `the foods I love Most are ${firstFood} , ${secondFood}, ${thirdFood}, ${f1} `
+// );
+
+const [firstFood, secondFood, , [f1, , f3, f5 = "Defult"]] = food2;
+
+console.log(
+  `the foods I love Most are ${firstFood} , ${secondFood}, ${(f1, f3, f5)} `
+);

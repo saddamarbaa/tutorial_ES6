@@ -203,8 +203,7 @@ console.log(addAllParams(5, 5, 5, 5, 5)); /* Output: 25 */
 //startsWith => string.startsWith(search string,position = 0)
 //endsWith => string.endsWith(search string, end position =string.length)
 
-let hisName = "Ali Adam Mohhhmed";
-var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let hisName = "Ali Adam Mohhhmed ";
 
 console.log(hisName.startsWith("a"));
 console.log(hisName.startsWith("A"));
@@ -214,3 +213,14 @@ console.log(hisName.endsWith("h"));
 console.log(hisName.endsWith("d", hisName.length));
 console.log(hisName.endsWith("Mohhhmed", hisName.length - 1));
 console.log(hisName.endsWith("i", 3));
+
+// [ New String Methods - Includes, Repeat]
+// includes => string.includes(search string,position = 0)
+// repeat => string.repeat(count)
+
+console.log(hisName.includes("h"));
+console.log(hisName.includes("p"));
+console.log(hisName.includes("A", 5));
+console.log(hisName.includes("A", 4));
+console.log("ok ".repeat(5));
+// console.log(hisName.repeat(12));

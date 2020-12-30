@@ -1,5 +1,5 @@
 /*
-			[lecture 01 Introduction ES6]
+			[ Introduction ES6]
 			
    ES6, ES7, ES8
 			[E]CMAS [c] ript 6  / ECMAScript 2015 - ES6
@@ -7,7 +7,7 @@
 */
 
 /* 
-			[lecture 2 New Features in ES6]
+			[New Features in ES6]
 			
     The let keyword
     The const keyword
@@ -48,7 +48,7 @@ console.log(PI);
 console.log(name);
 
 /*
-			[lecture 2 Arrow Function - Syntax and Examples]
+			[Arrow Function - Syntax and Examples]
 			[Arrow functions allows a short syntax for writing function expressions]
 			[You don't need the function keyword, the return keyword, and the curly brackets]
 			[Syntax]
@@ -117,3 +117,7 @@ let arrawTestFour = (param1, param2) => param1 * param2;
 
 console.log(regularTesThree(5, 5));
 console.log(arrawTestFour(10, 5));
+
+/*
+			[lArrow function and this keyword in javascript]
+	*/

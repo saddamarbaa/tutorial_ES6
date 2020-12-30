@@ -236,8 +236,14 @@ const user = {
   country: "sudan",
   curentCountry: "indonesia",
   them: "yellow",
+  languges: {
+    html: "77%",
+    css: "89%",
+    js: "44%",
+  },
 };
 
+// Extracting a property
 const { MyName, age, gender, them = "blue" } = user;
 
 console.log(
@@ -249,9 +255,42 @@ const hero = {
   realName: "Adam Ali",
 };
 
+// Extracting a property
 const { fname, realName } = hero;
 fname; // => 'Ali',
 realName; // => 'Adam Ali'
 
 console.log(fname); /* output Ali */
 console.log(realName); /* output Adam Ali */
+
+// Aliases
+// const { identifier: aliasIdentifier } = expression;
+const {
+  MyName: theName,
+  age: theAge,
+  gender: theGender,
+  them: theThem = "blue",
+} = user;
+
+console.log(
+  `My Name Is : ${theName}, Iam ${theAge} Years Old and Iam ${theGender} my them is ${theThem}`
+);
+
+// Extracting properties from nested objects
+// const { nestedObjectProp: { identifier } } = expression;
+
+const {
+  MyName: theName1,
+  age: theAge1,
+  gender: theGender1,
+  them: theThem1 = "blue",
+  languges: { html, css },
+} = user;
+
+console.log(
+  `My Name Is : ${theName1}, Iam ${theAge1} Years Old and Iam ${theGender1} my them is ${theThem1} languges I know are  html ${html} and css ${css} `
+);
+
+const { html: HTML, css: CSS, js: JS } = user.languges;
+
+console.log(`${HTML}, ${CSS}, ${JS}`);

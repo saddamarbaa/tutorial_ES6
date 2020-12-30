@@ -294,3 +294,17 @@ console.log(
 const { html: HTML, css: CSS, js: JS } = user.languges;
 
 console.log(`${HTML}, ${CSS}, ${JS}`);
+
+// Destructuring Array Part 1
+
+const food = ["Burger", "Pizza", "chicken", "meat", "orange", "Rice"];
+
+// const [one, two, three, four, five = "defult"] = food;
+
+const [one, , three] = food;
+
+// console.log(
+//   `the foods I love Most are ${one}, ${two} ${three} ${four}  ${five}`
+// );
+
+console.log(`the foods I love Most are ${one} , ${three} `);

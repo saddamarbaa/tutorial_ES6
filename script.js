@@ -29,15 +29,33 @@
 			- Undefined When Accessing Variable Before its Declared
 			- Does Not Create Properties in the Windows Object
 
-			[let]
+			[The let keyword]
 			- Block Sope
 			- cannot Be ReDeclare
 			- ReferenceEror When Accessing Variable Before its Declared
 			- Does Not Create Properties in the Windows Object
 
-			[const]
+			[The const keyword]
 			- Block Sope
 			- cannot Be ReDeclare
 			- ReferenceEror When Accessing Variable Before its Declared
 			- Does Not Create Properties in the Windows Object
+*/
+
+const PI = 3.14;
+const name = "Saddam";
+console.log(PI);
+console.log(name);
+
+/*
+			[lecture 2 Arrow Function - Syntax and Examples]
+			[Arrow functions allows a short syntax for writing function expressions]
+			[You don't need the function keyword, the return keyword, and the curly brackets]
+			[Syntax]
+			[param => expression]
+			[(param1, paramN) => expression]
+			param => {
+  let a = 1;
+  return a + param;
+}
 */

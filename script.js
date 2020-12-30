@@ -224,3 +224,34 @@ console.log(hisName.includes("A", 5));
 console.log(hisName.includes("A", 4));
 console.log("ok ".repeat(5));
 // console.log(hisName.repeat(12));
+
+// Destructuring Object Part 1
+// The basic syntax of object destructuring is pretty simple:
+// const { identifier } = expression;
+
+const user = {
+  MyName: "saddam",
+  age: 30,
+  gender: "male",
+  country: "sudan",
+  curentCountry: "indonesia",
+  them: "yellow",
+};
+
+const { MyName, age, gender, them = "blue" } = user;
+
+console.log(
+  `My Name Is : ${MyName}, Iam ${age} Years Old and Iam ${gender} my them is ${them}`
+);
+
+const hero = {
+  fname: "Ali",
+  realName: "Adam Ali",
+};
+
+const { fname, realName } = hero;
+fname; // => 'Ali',
+realName; // => 'Adam Ali'
+
+console.log(fname); /* output Ali */
+console.log(realName); /* output Adam Ali */

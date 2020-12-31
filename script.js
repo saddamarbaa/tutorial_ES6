@@ -335,7 +335,6 @@ let vedio = "book";
 console.log("Book is :", book);
 console.log("vedio is :", vedio);
 
-// - Destructuring Function Parameters
 //  Destructuring Mixed Content
 
 const student = {
@@ -348,7 +347,23 @@ const student = {
   },
 };
 
-const {
+// const {
+//   studentName,
+//   StudentAge,
+//   StudentSkills: {
+//     SHTML,
+//     Scss,
+//     Sjs: [A, B, C],
+//   },
+// } = student;
+
+// console.log(`my Name is ${studentName} , and am ${StudentAge}`);
+// console.log(`my html skills is ${SHTML} and my css skills ${Scss}`);
+// console.log(`I have Knowlede framework like ${A} and my css skills ${B}`);
+
+// Destructuring Function Parameters
+
+function showStudentInfo({
   studentName,
   StudentAge,
   StudentSkills: {
@@ -356,9 +371,10 @@ const {
     Scss,
     Sjs: [A, B, C],
   },
-} = student;
+}) {
+  console.log(`my Name is ${studentName} , and am ${StudentAge}`);
+  console.log(`my html skills is ${SHTML} and my css skills ${Scss}`);
+  console.log(`I have Knowlede framework like ${A} and my css skills ${B}`);
+}
 
-console.log(`my Name is ${studentName} , and am ${StudentAge}`);
-console.log(`my html skills is ${SHTML} and my css skills ${Scss}`);
-console.log(`I have Knowlede framework like ${A} and my css skills ${B}`);
-// Enhanced Object Literals
+showStudentInfo(student);

@@ -319,8 +319,18 @@ const food2 = ["Burger", "Pizza", "chicken", ["Apple", "Banana", "Mango"]];
 //   `the foods I love Most are ${firstFood} , ${secondFood}, ${thirdFood}, ${f1} `
 // );
 
+// const [firstFood, ...otherfood] = food2;
+
 const [firstFood, secondFood, , [f1, , f3, f5 = "Defult"]] = food2;
 
 console.log(
   `the foods I love Most are ${firstFood} , ${secondFood}, ${(f1, f3, f5)} `
 );
+
+// Destructuring Array - Swap Variables
+let book = "vedio";
+let vedio = "book";
+// swap
+[vedio, book] = [book, vedio];
+console.log("Book is :", book);
+console.log("vedio is :", vedio);

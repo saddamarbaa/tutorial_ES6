@@ -395,3 +395,19 @@ let newSet = new Set(myArray);
 // convert  set to an array
 let newArray = [...mySet];
 console.log(newSet);
+
+// Set Methods
+
+let myBook = new Set("saddam");
+myBook.add("saddamm");
+console.log(myBook);
+
+myBook.delete("saddamm");
+console.log(myBook);
+console.log(myBook);
+console.log(myBook.has("s"));
+console.log(myBook.has("s".toLocaleLowerCase));
+console.log(myBook.has("xr"));
+
+myBook.clear();
+console.log(myBook);

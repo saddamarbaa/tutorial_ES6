@@ -115,9 +115,7 @@ let arrawTestFour = (param1, param2) => param1 * param2;
 console.log(regularTesThree(5, 5));
 console.log(arrawTestFour(10, 5));
 
-/*
-			[lArrow function and this keyword in javascript]
-	*/
+// 	[lArrow function and this keyword in javascript]
 
 // [Template Literals]
 
@@ -139,6 +137,7 @@ let array1 = [1, 2, 3, 4];
 
 let array2 = [5, 6, 7, 8];
 let allArray = [...array1, ...array2];
+
 console.log(array1); /* output:[1, 2, 3, 4] */
 console.log(array2); /* output: [5, 6, 7, 8] */
 console.log(allArray); /* output:[1,2,3,4,5,6,7,8] */
@@ -148,6 +147,7 @@ const numbers = [20, 30, 40];
 function sumNumbers(num1, num2, num3) {
   return num1 + num2 + num3;
 }
+
 // console.log(sumNumbers(numbers));
 console.log(numbers); /* output:[20, 30, 40]*/
 console.log(...numbers); /* output:20 30 40 */
@@ -162,6 +162,7 @@ console.log(customArray);
 function greeting($greeting = "Hello World") {
   console.log($greeting);
 }
+
 greeting(); /* output: Hello World  */
 greeting("sadam"); /* output: sadam */
 
@@ -325,6 +326,7 @@ console.log(
 );
 
 // Destructuring Array - Swap Variables
+
 let book = "vedio";
 let vedio = "book";
 // swap
@@ -427,6 +429,7 @@ let myMap2 = new Map([
 console.log(myMap2);
 
 //  Map Methods
+
 console.log(`my map element count is : ${myMap2.size}`);
 console.log(`get method : ${myMap2.get(10)}`);
 console.log(`has method : ${myMap2.has(10)}`);
@@ -485,3 +488,57 @@ const demoMap = new Map([
 demoMap.forEach((value, key) => {
   console.log(`${key} ==>${value}`);
 });
+
+// Set vs WeakSet And Garbage Collection
+
+// Normall set
+
+// let mainObject = { A: 1 };
+
+// const testingSet = new Set([mainObject]);
+
+// let firstObject = { B: 2 };
+// let secondObject = { C: 3 };
+
+// testingSet.add(firstObject);
+// testingSet.add(secondObject);
+// console.log(testingSet);
+// console.log(testingSet.size);
+// testingSet.delete(firstObject);
+// console.log(testingSet.size);
+// console.log(testingSet.has(firstObject));
+// firstObject = null;
+// console.log(testingSet);
+
+// testingSet.forEach((element) => {
+//   console.log(element);
+// });
+
+// WeakSet
+
+let mainObject = { A: 1 };
+
+const testingSet = new WeakSet([mainObject]);
+
+let firstObject = { B: 2 };
+let secondObject = { C: 3 };
+
+console.log(testingSet);
+testingSet.add(firstObject);
+testingSet.add(secondObject);
+
+console.log(testingSet.has(firstObject));
+console.log(testingSet.has(secondObject));
+
+testingSet.delete(firstObject);
+console.log(testingSet.has(firstObject));
+console.log(testingSet);
+
+firstObject = null;
+console.log(testingSet.has(firstObject));
+// testingSet.add(12);
+console.log(testingSet);
+
+// testingSet.forEach((element) => {
+//   console.log(element);
+// });

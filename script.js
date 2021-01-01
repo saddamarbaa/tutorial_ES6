@@ -411,3 +411,20 @@ console.log(myBook.has("xr"));
 
 myBook.clear();
 console.log(myBook);
+
+// - Map vs Object
+
+let myMap = new Map();
+myMap.set("10", "string").set(10, "numbers").set(false, "boolean");
+myMap.set("lass", "ok");
+myMap.set({ a: 2, b: 23 }, "object");
+console.log(myMap);
+
+let myMap2 = new Map([
+  ["10", "string"],
+  [10, "numbers"],
+  [false, "boolean"],
+  [{ a: 2, b: 23 }, "object"],
+]);
+
+console.log(myMap2);

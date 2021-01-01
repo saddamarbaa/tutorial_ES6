@@ -449,3 +449,18 @@ const mySymbolOne = Symbol();
 const mySymbolTwo = Symbol();
 
 console.log(mySymbolOne === mySymbolTwo); // script.js:451 false
+
+//  forEach
+
+let testDemo = ["A", "B", , "D", "E", "F"];
+
+console.log(testDemo);
+
+for (let index = 0; index < testDemo.length; index++) {
+  console.log(`${index} : ${testDemo[index]}`);
+}
+
+testDemo.forEach((element, indext) => {
+  // console.log(element);
+  console.log(`${indext} : ${element}`);
+});

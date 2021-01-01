@@ -542,3 +542,55 @@ console.log(testingSet);
 // testingSet.forEach((element) => {
 //   console.log(element);
 // });
+
+// Map vs WeakMap
+// Map
+
+// const mainTestingMap = new Map();
+// let thirdObject = { D: 3 };
+// let fourthObject = { E: 4 };
+// console.log(mainTestingMap);
+
+// mainTestingMap.set(thirdObject, "test1");
+// mainTestingMap.set(fourthObject, "test2");
+// console.log(mainTestingMap);
+
+// mainTestingMap.set(2, 23);
+// mainTestingMap.set("k", 234);
+// console.log(mainTestingMap);
+
+// console.log(mainTestingMap.get(thirdObject));
+// console.log(mainTestingMap.get("k"));
+
+// console.log(mainTestingMap.has(thirdObject));
+// mainTestingMap.delete(thirdObject);
+// console.log(mainTestingMap.has(thirdObject));
+
+// thirdObject = null;
+// console.log(mainTestingMap.get(thirdObject));
+// console.log(mainTestingMap.size);
+
+// WeakMap
+
+const mainTestingMap = new WeakMap();
+let thirdObject = { D: 3 };
+let fourthObject = { E: 4 };
+
+console.log(mainTestingMap);
+
+mainTestingMap.set(thirdObject, "test1");
+mainTestingMap.set(fourthObject, "test2");
+console.log(mainTestingMap);
+
+// mainTestingMap.set(2, 23);
+// mainTestingMap.set("k", 234);
+// console.log(mainTestingMap);
+
+console.log(mainTestingMap.get(thirdObject));
+
+console.log(mainTestingMap.has(thirdObject));
+mainTestingMap.delete(thirdObject);
+console.log(mainTestingMap.has(thirdObject));
+
+thirdObject = null;
+console.log(mainTestingMap.get(thirdObject));

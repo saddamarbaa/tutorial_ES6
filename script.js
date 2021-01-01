@@ -438,3 +438,14 @@ console.log(`has method : ${myMap2.delete("10")}`);
 console.log(`my map element count is : ${myMap2.size}`);
 console.log(`has method : ${myMap2.clear()}`);
 console.log(`my map element count is : ${myMap2.size}`);
+
+// Symbol
+// The data type symbol is a primitive data type
+// const mySymbol = Symbol();
+
+console.log(typeof mySymbol); /* symbol */
+
+const mySymbolOne = Symbol();
+const mySymbolTwo = Symbol();
+
+console.log(mySymbolOne === mySymbolTwo); // script.js:451 false

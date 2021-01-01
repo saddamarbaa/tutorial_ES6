@@ -428,3 +428,13 @@ let myMap2 = new Map([
 ]);
 
 console.log(myMap2);
+
+//  Map Methods
+console.log(`my map element count is : ${myMap2.size}`);
+console.log(`get method : ${myMap2.get(10)}`);
+console.log(`has method : ${myMap2.has(10)}`);
+console.log(`my map element count is : ${myMap2.size}`);
+console.log(`has method : ${myMap2.delete("10")}`);
+console.log(`my map element count is : ${myMap2.size}`);
+console.log(`has method : ${myMap2.clear()}`);
+console.log(`my map element count is : ${myMap2.size}`);

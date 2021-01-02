@@ -742,3 +742,53 @@ console.log(getNumber.next().value);
 // console.log(getNumber.next().value);
 console.log(getNumber.next());
 console.log(`${"#".repeat(10)}`);
+
+// Generators Part 2 Functionality And Return
+
+// function orderBook() {
+//   window.alert("You Clicked On Button To Order Book");
+//   console.log("You Clicked On Button To Order Book");
+
+//   window.alert("You added new Book to the list");
+//   console.log("You added new Book to the list");
+
+//   window.alert("Payment is done");
+//   console.log("Payment is done");
+// }
+
+// let orderNow = orderBook();
+
+// function* orderBook() {
+//   window.alert("You Clicked On Button To Order Book");
+//   console.log("You Clicked On Button To Order Book");
+
+//   window.alert("You added new Book to the list");
+//   console.log("You added new Book to the list");
+
+//   window.alert("Payment is done");
+//   console.log("Payment is done");
+// }
+
+// let orderNow = orderBook();
+// console.log(orderNow);
+// console.log(orderNow.next().value);
+
+function* mySkills() {
+  yield "Html";
+  yield "css";
+  yield "javascript";
+  yield "python";
+  yield "c++";
+}
+
+// loop on Iterators
+
+let skills = mySkills();
+for (let skill of skills) {
+  console.log(skill);
+}
+
+// loop on Genrators
+for (let skill of mySkills()) {
+  console.log(skill);
+}

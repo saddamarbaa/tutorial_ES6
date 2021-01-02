@@ -657,10 +657,14 @@ for (const iterator of testArray) {
 
 // Custom Iterable Object
 
+// let create custom iterable object
+
 const doctors = {
   name: "Ali",
   age: 36,
   hospital: "batam",
+  //  let create custom iterable object
+
   [Symbol.iterator]() {
     let counter = 0;
     let properties = Object.keys(this);
@@ -680,3 +684,34 @@ const doctors = {
 for (let doctor of doctors) {
   console.log(doctor);
 }
+
+/*   
+		Generators Part 1 
+		Intro And Whats Generators
+*/
+
+function* GenerateTickets() {
+  yield 1;
+  yield 2;
+  yield 3;
+  yield 4;
+  yield 5;
+}
+
+let iterator = GenerateTickets();
+
+console.log(iterator);
+console.log(iterator.next());
+
+console.log(iterator.next().value);
+console.log(iterator.next().done);
+
+console.log(`${"#".repeat(10)}`);
+console.log("Atfer new cusomer come now let ask for new ticket");
+console.log(iterator.next().value);
+console.log(iterator.next().done);
+
+console.log(`${"#".repeat(10)}`);
+console.log("agin Atfer new cusomer come now let ask for new ticket");
+console.log(iterator.next().value);
+console.log(iterator.next().done);

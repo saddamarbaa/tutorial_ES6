@@ -894,3 +894,9 @@ lettures.copyWithin(0);
 lettures.copyWithin(0, 2, 5);
 lettures.copyWithin(0, 4);
 console.log(lettures);
+
+// Modules - Part 1 Import & Export
+
+import {test1, demoArray, sayHello } from `./app`;
+
+console.log(demoArray);

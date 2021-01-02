@@ -789,6 +789,38 @@ for (let skill of skills) {
 }
 
 // loop on Genrators
+
 for (let skill of mySkills()) {
   console.log(skill);
 }
+
+// Generators Part 3 Delegating Generators
+
+function* GenerateNums() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+function* GenerateNames() {
+  yield "Saddam";
+  yield "Arbaa";
+  yield "Adam";
+}
+
+function* generateAll() {
+  yield* GenerateNums();
+  yield* GenerateNames();
+}
+
+let generate_all = generateAll();
+
+// will finished yeild all the element in first function then continue to next one
+console.log(`${"#".repeat(10)}`);
+console.log(generate_all.next());
+console.log(generate_all.next());
+console.log(generate_all.next());
+console.log(generate_all.next());
+console.log(generate_all.next());
+console.log(generate_all.next());
+// console.log(generate_all.next()); /* undifned */

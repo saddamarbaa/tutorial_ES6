@@ -654,3 +654,29 @@ for (const char of testName) {
 for (const iterator of testArray) {
   console.log(iterator);
 }
+
+// Custom Iterable Object
+
+const doctors = {
+  name: "Ali",
+  age: 36,
+  hospital: "batam",
+  [Symbol.iterator]() {
+    let counter = 0;
+    let properties = Object.keys(this);
+    // console.log(properties);
+    return {
+      next() {
+        return {
+          // value: properties[counter],
+          value: doctors[properties[counter]],
+          done: counter++ === properties.length,
+        };
+      },
+    };
+  },
+};
+
+for (let doctor of doctors) {
+  console.log(doctor);
+}

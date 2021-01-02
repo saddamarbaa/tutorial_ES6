@@ -816,6 +816,7 @@ function* generateAll() {
 let generate_all = generateAll();
 
 // will finished yeild all the element in first function then continue to next one
+
 console.log(`${"#".repeat(10)}`);
 console.log(generate_all.next());
 console.log(generate_all.next());
@@ -824,3 +825,24 @@ console.log(generate_all.next());
 console.log(generate_all.next());
 console.log(generate_all.next());
 // console.log(generate_all.next()); /* undifned */
+
+// New Array Methods Part 1
+
+let oldArray = Array(100);
+console.log(oldArray); // output [empty × 100]
+console.log(oldArray.length); // out [100]
+
+let newArray1 = Array.of(100);
+console.log(newArray1); // out [100]
+console.log(newArray1.length); // out 1
+
+let herName = "Jenny";
+let arrayOfLetters = Array.from(herName);
+
+console.log(herName);
+console.log(arrayOfLetters);
+
+let normalNumbers = [10, 20, 30, 40, 50, 60, 70, 80];
+let numbersMinusTen = Array.from(normalNumbers, (numbers) => numbers - 10);
+console.log(normalNumbers);
+console.log(numbersMinusTen);

@@ -826,7 +826,14 @@ console.log(generate_all.next());
 console.log(generate_all.next());
 // console.log(generate_all.next()); /* undifned */
 
-// New Array Methods Part 1
+/*
+	New Array Methods Part 1
+			Array.of
+			Array.from
+			Array.fill
+	*/
+
+//Array.of
 
 let oldArray = Array(100);
 console.log(oldArray); // output [empty × 100]
@@ -835,6 +842,8 @@ console.log(oldArray.length); // out [100]
 let newArray1 = Array.of(100);
 console.log(newArray1); // out [100]
 console.log(newArray1.length); // out 1
+
+// Array.from
 
 let herName = "Jenny";
 let arrayOfLetters = Array.from(herName);
@@ -846,3 +855,14 @@ let normalNumbers = [10, 20, 30, 40, 50, 60, 70, 80];
 let numbersMinusTen = Array.from(normalNumbers, (numbers) => numbers - 10);
 console.log(normalNumbers);
 console.log(numbersMinusTen);
+
+// Array.fill
+// Array.fill (value to fill, Start Defult 0, End Default Array.length)
+
+let themNumbers = [1, 10, 30, 70, 90];
+
+// themNumbers.fill(100); // All will be 100
+// themNumbers.fill(100, 2); // from 30 until end
+themNumbers.fill(100, 1, 3); // from 10 30
+
+console.log(themNumbers);

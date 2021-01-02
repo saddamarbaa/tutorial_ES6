@@ -594,3 +594,20 @@ console.log(mainTestingMap.has(thirdObject));
 
 thirdObject = null;
 console.log(mainTestingMap.get(thirdObject));
+
+/*
+					Symbol Iterator And For Of Loop
+					Iterable => Object Has Symbol.Iterator
+					Iterator
+						- Object With Interface Designed For Iteration
+						- All Iterators Has Next Method That Return Result Object
+						- The Result Object Has Two Props
+						-- [1] Value =>The Next Value
+						--[2] Done => Boolean Value To tell If The Next Value Exists or No
+
+						For  ... Of Loop 
+
+						[1] Call Symbol.Iterator With Next Method
+						[2] Save Value Inside variable
+						[3] Check For Done If Its True => Exit The Loop
+		*/

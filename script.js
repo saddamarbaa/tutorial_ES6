@@ -715,3 +715,30 @@ console.log(`${"#".repeat(10)}`);
 console.log("agin Atfer new cusomer come now let ask for new ticket");
 console.log(iterator.next().value);
 console.log(iterator.next().done);
+
+console.log(`${"#".repeat(10)}`);
+
+let arrayForTest = [10, 20, 30, 40, 50, 60, 70];
+
+function* GenerateNumbers(numbers) {
+  // loop through Yield
+  // yield* [1, 2, 3, 4];
+
+  for (let number = 0; number < numbers.length; number++) {
+    yield numbers[number];
+  }
+}
+
+let getNumber = GenerateNumbers(arrayForTest);
+console.log(getNumber);
+console.log(typeof getNumber);
+console.log(getNumber.next().value);
+console.log(getNumber.next().value);
+console.log(getNumber.next().value);
+console.log(getNumber.next().value);
+console.log(getNumber.next().value);
+console.log(getNumber.next().value);
+console.log(getNumber.next().value);
+// console.log(getNumber.next().value);
+console.log(getNumber.next());
+console.log(`${"#".repeat(10)}`);

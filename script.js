@@ -866,3 +866,31 @@ let themNumbers = [1, 10, 30, 70, 90];
 themNumbers.fill(100, 1, 3); // from 10 30
 
 console.log(themNumbers);
+
+/* New Array Methods Part 2
+		 Array.find()
+		 Array.findIdex()
+	 	Array.copyWithin
+*/
+
+// Array.find
+// find me number bigger than 10
+let found = themNumbers.find((ele) => ele > 10);
+console.log(found);
+
+console.log(`${"#".repeat(40)}`);
+
+// Array.findIndex
+
+// find index of first element bigger than 10
+let found2 = themNumbers.findIndex((ele) => ele > 10);
+console.log(found2);
+
+// Array.copyWhitin
+// Array.copyWhtin(Target, Start Default 0, End Defult Array.length)
+
+let lettures = ["A", "B", "C", "D", "E", "F", "G"];
+lettures.copyWithin(0);
+lettures.copyWithin(0, 2, 5);
+lettures.copyWithin(0, 4);
+console.log(lettures);

@@ -14,7 +14,7 @@
 
 // Modules - Part 2 Import All And Aliases
 
-import * as myAllias from "./app.js";
+import defultExport, * as myAllias from "./app.js";
 
 console.log(myAllias.months);
 console.log(myAllias.myNumber);
@@ -22,3 +22,8 @@ console.log(myAllias.userAge);
 console.log(myAllias.sayHello("Ali"));
 
 console.log(myAllias);
+
+// Modules - Part 3 Named Export Vs Default Export
+
+// thsi one is Default Export so no need to add  myAllias
+console.log(defultExport());

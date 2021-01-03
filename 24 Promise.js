@@ -211,3 +211,48 @@ fetch("https://api.github.com/users/saddamarbaa/repos")
       document.body.appendChild(newElement);
     }
   });
+
+// Promise All
+
+// const myFirstPromise = new Promise((resolve, reject) => {
+//   let connect = true;
+//   if (connect) {
+//     resolve("First Promise Resolved");
+//   } else {
+//     reject("First Promise Rejected");
+//   }
+// });
+
+// const mySecondPromise = new Promise((resolve, reject) => {
+//   let settings = true;
+//   if (settings) {
+//     resolve("Second Promise Resolved");
+//   } else {
+//     reject("Second Promise Rejected");
+//   }
+// });
+
+// Promise.all([myFirstPromise, mySecondPromise]).then((result) => {
+//   console.log(result);
+// });
+
+// Promise Race
+
+const myFirstPromise = new Promise((resolve, reject) => {
+  window.setTimeout(() => {
+    resolve("First Promise Resolved");
+  }, 50);
+});
+
+const mySecondPromise = new Promise((resolve, reject) => {
+  window.setTimeout(() => {
+    resolve("Second Promise Resolved");
+  }, 100);
+});
+
+// myFirstPromise.then((result) => console.log(result));
+// mySecondPromise.then((result) => console.log(result));
+
+Promise.race([myFirstPromise, mySecondPromise]).then((result) => {
+  console.log(result);
+});

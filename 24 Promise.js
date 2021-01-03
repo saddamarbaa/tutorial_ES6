@@ -83,3 +83,74 @@ const demoPromise = new Promise((resolve, reject) => {
 
 demoPromise.then((resolved) => console.log(resolved));
 demoPromise.catch((rejected) => console.log(rejected));
+
+/*
+		Promise – And XMLHTTPRequest  
+		git information from my github
+*/
+// Without Promise
+
+function getFirstRepo(apiURL) {
+  let myRequest = new XMLHttpRequest();
+
+  myRequest.onreadystatechange = function () {
+    if (this.readyState === 4 && this.status === 200) {
+      /*
+					Ready State => The Status Of The Request
+					[0] Request Not Initialized
+					[1] Server Connection Established
+					[2] Request Recieved
+					[3] Processing Request
+					[4] Request Is Finished And Response Is Ready
+					Status => Response Status Code
+					[200] Ok
+					[404] Not Found
+			*/
+
+      // console.log(this.responseText);
+      console.log(JSON.parse(this.responseText)[0].name); // my firs repo name
+    }
+  };
+
+  // XMLHttpRequest.open(Method, URL, Async, User, Pass)
+  myRequest.open("GET", apiURL, true);
+
+  // Send The Request
+  myRequest.send();
+}
+
+// call the function and pass my github URL as argument
+getFirstRepo("https://api.github.com/users/saddamarbaa/repos");
+
+// With Promise
+
+const getSecondRepo = (apiURL) => {
+  return new Promise((resolve, reject) => {
+    let myRequest = new XMLHttpRequest();
+    myRequest.onload = function () {
+      if (this.readyState === 4 && this.status === 200) {
+        resolve(JSON.parse(this.responseText)[1].name);
+      } else {
+        reject(Error(this.statusText));
+      }
+    };
+    myRequest.open("GET", apiURL, true);
+    myRequest.send();
+  });
+};
+
+// getSecondRepo("https://api.github.com/users/saddamarbaa/repos").then(
+//   (result) => console.log(result),
+//   (error) => console.log(error)
+// );
+
+getSecondRepo("https://api.github.com/users/saddamarbaa/repos").then(
+  (result) => {
+    let div = document.createElement("div");
+    // the repo which been returned
+    let text = document.createTextNode(result);
+    div.appendChild(text);
+    document.body.appendChild(div);
+  }
+),
+  (error) => console.error();

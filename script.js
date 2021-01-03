@@ -1081,6 +1081,5 @@ const demoPromise = new Promise((resolve, reject) => {
 // demoPromise.then((resolved) => console.log(resolved));
 // demoPromise.catch((rejected) => console.log(rejected));
 
-demoPromise
-  .then((resolved) => console.log(resolved))
-  .catch((rejected) => console.log(rejected));
+demoPromise.then((resolved) => console.log(resolved));
+demoPromise.catch((rejected) => console.log(rejected));

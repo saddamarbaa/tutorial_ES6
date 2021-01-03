@@ -999,7 +999,6 @@ window.setTimeout(() => console.log("Get lates feed back", 2000));
 console.log("Do Important Things,Waiting is A big Problem");
 
 /*
-  Promise Intro And Discussions
   Promise Intro
   - Promise Is One Of The Best Features In ES6
   - Promise Make It Easy To Support Asynchronous Programming
@@ -1030,3 +1029,32 @@ console.log("Do Important Things,Waiting is A big Problem");
   [2] Fulfilled => Operation Succeeded
   [3] Rejected => Operation Failed
 */
+
+const myPromise = new Promise((resolve, reject) => {
+  // console.log("Welcome To My First Promise");
+  /*
+			Asynchronous Operation
+			Fulfilled => resolve
+			Rejected => reject
+	*/
+
+  // let connect = false;
+  let connect = true;
+  if (connect) {
+    resolve("Connection Established");
+  } else {
+    reject(Error("Connection Failed"));
+  }
+}).then(
+  (resolved) => console.log(resolved),
+  (rejected) => console.log(rejected)
+);
+
+console.log(typeof myPromise);
+
+// Another Syntax
+
+const theResolved = (resolved) => console.log(resolved);
+const therejected = (rejected) => console.log(rejected);
+
+myPromise.then(theResolved, therejected);

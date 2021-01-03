@@ -1,11 +1,24 @@
 // 📁 main.js
-import { userAge, months, numbers, sayHello } from "./app.js";
+// Modules - Part 2 Import All And Aliases
 
-console.log(sayHello("saddam"));
-console.log(months);
-console.log(numbers);
-console.log(userAge);
+// import { userAge, months, myNumber, sayHello } from "./app.js";
 
-for (let month = 0; month < months.length; month++) {
-  console.log(months[month]);
-}
+// console.log(sayHello("saddam"));
+// console.log(months);
+// console.log(myNumber);
+// console.log(userAge);
+
+// for (let month = 0; month < months.length; month++) {
+//   console.log(months[month]);
+// }
+
+// Modules - Part 2 Import All And Aliases
+
+import * as myAllias from "./app.js";
+
+console.log(myAllias.months);
+console.log(myAllias.myNumber);
+console.log(myAllias.userAge);
+console.log(myAllias.sayHello("Ali"));
+
+console.log(myAllias);

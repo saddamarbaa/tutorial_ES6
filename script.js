@@ -895,8 +895,27 @@ lettures.copyWithin(0, 2, 5);
 lettures.copyWithin(0, 4);
 console.log(lettures);
 
-// Modules - Part 1 Import & Export
+/*
+  OOP  ==> Class Part
+		Old and New Class Syntax
+*/
 
-import {test1, demoArray, sayHello } from `./app`;
+class User {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  getInfo() {
+    console.log(`Hello ${this.name} Your Age is ${this.age}`);
+  }
+  getDays() {
+    console.log(`Your in Days ${this.age} Days`);
+  }
+}
 
-console.log(demoArray);
+// user constructor
+console.log(User.prototype);
+
+const firstUser = new User("Sadam", 24);
+firstUser.getDays(); // Your in Days 24 Days
+firstUser.getInfo(); // Hello Sadam Your Age is 24

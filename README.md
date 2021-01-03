@@ -6,6 +6,12 @@ and Module 6: Advanced Modern Javascript (Part of Profit With JavaScript Course)
 at [https://www.cleverprogrammer.com/products/profit-with-javascript/categories/2152581]
 
 
+
+## TODO
+added Notes on New Features in ES7, ES10
+
+
+
 ## Recommended Books
 
 Understanding ECMAScript 6: The Definitive Guide for JavaScript Developers

@@ -958,3 +958,23 @@ class studentMemember extends Student {
 let stud3 = new studentMemember("Jhon Joe", 19, 21, 3.4);
 stud3.getGpa();
 stud3.register();
+
+// Call Stack, Web API, Event Loop, Callback Queue
+
+/*
+		out for blow will be
+			first
+			thrid
+			second
+			last excuit
+*/
+
+window.setTimeout(() => console.log("last excuit"), 10);
+console.log("first");
+window.setTimeout(() => console.log("second"), 0);
+console.log("thrid");
+
+// this will excuit at last
+window.setTimeout(() => console.log(numberForTest), 0);
+let numberForTest = 12; // excuit first
+numberForTest += 1; // excuit second

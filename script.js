@@ -1058,3 +1058,29 @@ const theResolved = (resolved) => console.log(resolved);
 const therejected = (rejected) => console.log(rejected);
 
 myPromise.then(theResolved, therejected);
+
+// Then And Catch And Training
+
+const demoPromise = new Promise((resolve, reject) => {
+  // only one State Allowed
+  // resolve("resolved");
+  // reject("Rjected"); // Igonored
+
+  if (Math.random() * 100 < 87) {
+    resolve("Good Luck");
+  } else {
+    reject("Bad Luck");
+  }
+});
+
+// demoPromise.then(
+//   (resolved) => console.log(resolved),
+//   (rejected) => console.log(rejected)
+// );
+
+// demoPromise.then((resolved) => console.log(resolved));
+// demoPromise.catch((rejected) => console.log(rejected));
+
+demoPromise
+  .then((resolved) => console.log(resolved))
+  .catch((rejected) => console.log(rejected));

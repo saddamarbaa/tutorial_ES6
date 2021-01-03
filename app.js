@@ -12,4 +12,4 @@ function sayHello(userName) {
 }
 
 // export all one time
-export { userAge, months, numbers, sayHello };
+export { userAge, months, numbers as myNumber, sayHello };

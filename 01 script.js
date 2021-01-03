@@ -45,15 +45,15 @@ console.log(PI);
 console.log(name);
 
 /*
-			[Arrow Function - Syntax and Examples]
-			[Arrow functions allows a short syntax for writing function expressions]
-			[You don't need the function keyword, the return keyword, and the curly brackets]
-			[Syntax]
-			[param => expression]
-			[(param1, paramN) => expression]
-			param => {
-  let a = 1;
-  return a + param;
+[Arrow Function - Syntax and Examples]
+[Arrow functions allows a short syntax for writing function expressions]
+[You don't need the function keyword, the return keyword, and the curly brackets]
+[Syntax]
+[param => expression]
+[(param1, paramN) => expression]
+param => {
+let a = 1;
+return a + param;
 }
 */
 
@@ -115,7 +115,7 @@ let arrawTestFour = (param1, param2) => param1 * param2;
 console.log(regularTesThree(5, 5));
 console.log(arrawTestFour(10, 5));
 
-// 	[lArrow function and this keyword in javascript]
+//[lArrow function and this keyword in javascript]
 
 // [Template Literals]
 
@@ -596,21 +596,21 @@ thirdObject = null;
 console.log(mainTestingMap.get(thirdObject));
 
 /*
-					Symbol Iterator And For Of Loop
-					Iterable => Object Has Symbol.Iterator
-					Iterator
-						- Object With Interface Designed For Iteration
-						- All Iterators Has Next Method That Return Result Object
-						- The Result Object Has Two Props
-						-- [1] Value => The Next Value
-						-- [2] Done => Boolean Value To tell If The Next Value Exists or No
+Symbol Iterator And For Of Loop
+Iterable => Object Has Symbol.Iterator
+Iterator
+- Object With Interface Designed For Iteration
+- All Iterators Has Next Method That Return Result Object
+- The Result Object Has Two Props
+-- [1] Value => The Next Value
+-- [2] Done => Boolean Value To tell If The Next Value Exists or No
 
-						For  ... Of Loop 
+For  ... Of Loop 
 
-						[1] Call Symbol.Iterator With Next Method
-						[2] Save Value Inside variable
-						[3] Check For Done If Its True => Exit The Loop
-		*/
+[1] Call Symbol.Iterator With Next Method
+[2] Save Value Inside variable
+[3] Check For Done If Its True => Exit The Loop
+*/
 
 let testName = "sadam";
 let testNumber = 1223;
@@ -686,8 +686,8 @@ for (let doctor of doctors) {
 }
 
 /*   
-		Generators Part 1 
-		Intro And Whats Generators
+Generators Part 1 
+Intro And Whats Generators
 */
 
 function* GenerateTickets() {
@@ -827,11 +827,11 @@ console.log(generate_all.next());
 // console.log(generate_all.next()); /* undifned */
 
 /*
-	New Array Methods Part 1
-			Array.of
-			Array.from
-			Array.fill
-	*/
+New Array Methods Part 1
+Array.of
+Array.from
+Array.fill
+*/
 
 //Array.of
 
@@ -868,9 +868,9 @@ themNumbers.fill(100, 1, 3); // from 10 30
 console.log(themNumbers);
 
 /* New Array Methods Part 2
-		 Array.find()
-		 Array.findIdex()
-	 	Array.copyWithin
+Array.find()
+Array.findIdex()
+Array.copyWithin
 */
 
 // Array.find
@@ -896,8 +896,8 @@ lettures.copyWithin(0, 4);
 console.log(lettures);
 
 /*
-  OOP  ==> Class Part
-		Old and New Class Syntax
+OOP  ==> Class Part
+Old and New Class Syntax
 */
 
 class User {
@@ -1033,10 +1033,10 @@ console.log("Do Important Things,Waiting is A big Problem");
 const myPromise = new Promise((resolve, reject) => {
   // console.log("Welcome To My First Promise");
   /*
-			Asynchronous Operation
-			Fulfilled => resolve
-			Rejected => reject
-	*/
+Asynchronous Operation
+Fulfilled => resolve
+Rejected => reject
+*/
 
   // let connect = false;
   let connect = true;
@@ -1085,8 +1085,8 @@ demoPromise.then((resolved) => console.log(resolved));
 demoPromise.catch((rejected) => console.log(rejected));
 
 /*
-		Promise – And XMLHTTPRequest  
-		git information from my github
+Promise – And XMLHTTPRequest  
+git information from my github
 */
 // Without Promise
 
@@ -1096,16 +1096,16 @@ function getFirstRepo(apiURL) {
   myRequest.onreadystatechange = function () {
     if (this.readyState === 4 && this.status === 200) {
       /*
-				Ready State => The Status Of The Request
-				[0] Request Not Initialized
-				[1] Server Connection Established
-				[2] Request Recieved
-				[3] Processing Request
-				[4] Request Is Finished And Response Is Ready
-				Status => Response Status Code
-				[200] Ok
-				[404] Not Found
-		*/
+	Ready State => The Status Of The Request
+	[0] Request Not Initialized
+	[1] Server Connection Established
+	[2] Request Recieved
+	[3] Processing Request
+	[4] Request Is Finished And Response Is Ready
+	Status => Response Status Code
+	[200] Ok
+	[404] Not Found
+      */
 
       // console.log(this.responseText);
       console.log(JSON.parse(this.responseText)[0].name); // my firs repo name

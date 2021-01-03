@@ -26,4 +26,23 @@ console.log(myAllias);
 // Modules - Part 3 Named Export Vs Default Export
 
 // thsi one is Default Export so no need to add  myAllias
-console.log(defultExport());
+// console.log(defultExport());
+
+import User from "./app.js";
+
+let user1 = new User("Saddam", "asdsd@gmail.com");
+user1.getUserInfo();
+class Admin extends User {
+  constructor(name, email, sallary) {
+    super(name, email);
+    this.sallary = sallary;
+  }
+
+  getSalary() {
+    console.log(`Your Salar for this month is ${this.sallary} `);
+  }
+}
+
+let user2 = new Admin("Manzer", "manze@edi.io", "200$");
+user2.getUserInfo();
+user2.getSalary();

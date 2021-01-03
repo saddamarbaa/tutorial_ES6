@@ -1,3 +1,6 @@
+// app.js file
+// Javscript Modules Import & Expor
+
 const userAge = 23;
 
 // export an array
@@ -13,3 +16,8 @@ function sayHello(userName) {
 
 // export all one time
 export { userAge, months, numbers as myNumber, sayHello };
+
+// this one  will be exported by defult
+export default function defultExport() {
+  console.log("just for test");
+}

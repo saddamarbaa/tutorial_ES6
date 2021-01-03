@@ -17,7 +17,18 @@ function sayHello(userName) {
 // export all one time
 export { userAge, months, numbers as myNumber, sayHello };
 
-// this one  will be exported by defult
-export default function defultExport() {
-  console.log("just for test");
+// // this one  will be exported by defult
+// export default function defultExport() {
+//   console.log("just for test");
+// }
+
+// user class
+export default class User {
+  constructor(name, email) {
+    this.name = name;
+    this.email = email;
+  }
+  getUserInfo() {
+    console.log(`Hello ${this.name} Welcome Your email is ${this.email}`);
+  }
 }

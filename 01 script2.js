@@ -84,16 +84,23 @@ sortBy("Date", []); // OutPut Sorting By:  Date
  */
 
 let fruits = ["apple", "banana", "orange", "cherries", "jackfruit", "guava"];
-console.log("For Loop #1:");
+console.log("For Loop:");
 for (let index = 0; index < fruits.length; index++) {
   console.log(fruits[index]);
 }
 
-console.log("forEach #2:");
-fruits.forEach((fruit) => {
+console.log("For-Of:");
+for (let fruit of fruits) {
   console.log(fruit);
-});
+}
 
 for (const fruit of fruits) {
   console.log(fruit);
 }
+
+console.log("# # # #");
+
+console.log("forEach :");
+fruits.forEach((fruit) => {
+  console.log(fruit);
+});

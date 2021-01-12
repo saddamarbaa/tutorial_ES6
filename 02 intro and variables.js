@@ -52,5 +52,6 @@
 
 const PI = 3.14;
 const name = "Saddam";
+// name = "Adam"; // Eror
 console.log(PI);
 console.log(name);

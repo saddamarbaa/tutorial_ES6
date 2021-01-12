@@ -104,3 +104,31 @@ console.log("forEach :");
 fruits.forEach((fruit) => {
   console.log(fruit);
 });
+
+// console.log("Map:");
+// const newFruits = fruits.map((fruit) => {
+//   console.log(fruit);
+//   return fruit;
+// });
+
+// console.log("Map:");
+// const newFruits = fruits.map((fruit) => {
+//   console.log(fruit);
+//   return `${fruit}  Modified`;
+// });
+
+console.log("Map:");
+const newFruits = fruits
+  .map((fruit) => {
+    console.log(fruit);
+    return fruit;
+  })
+  .filter((value) => {
+    if (value === "banana") {
+      return false;
+    } else {
+      return true;
+    }
+  });
+
+console.log(newFruits);

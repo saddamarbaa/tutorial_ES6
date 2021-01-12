@@ -1,1 +1,2 @@
-ES6+ Template Literals
+let output = getFullName();
+console.log(output);

@@ -44,3 +44,26 @@ let output = `${
 }`;
 
 console.log(output);
+
+/**
+ * Arrow Functions
+ */
+
+getFullName = () => {
+  let firstName = "Saddam";
+  let lastName = "Arbaa";
+  return `${firstName} ${lastName} test`;
+};
+
+let outputResult = getFullName();
+console.log(outputResult);
+
+// update variable values
+firstName = "Saddam";
+lastName = "Arbaa";
+
+getFullNameShorter = (firstName, lastName) =>
+  console.log(`${firstName} ${lastName}`);
+
+console.log("Shorted Example");
+getFullNameShorter(firstName, lastName);

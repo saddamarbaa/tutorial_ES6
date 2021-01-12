@@ -23,3 +23,24 @@ console.log(anotherExample);
 // anotherExample = [21, 3]; // TypeError: Assignment to constant variable.
 
 console.log(anotherExample);
+
+/**
+ * ES6+ Template Literals
+ */
+
+let firstName = "Sadam";
+let middleName = "Adam";
+let lastName = "Yahia";
+let fullName = `${firstName}  ${middleName}  ${lastName} welcome`;
+
+console.log(fullName);
+
+let searchResults = 50;
+
+// let output = `${searchResults > 0 ? searchResults + " results" : "No search results"}`;
+
+let output = `${
+  searchResults > 0 ? `${searchResults} results` : "No search results"
+}`;
+
+console.log(output);

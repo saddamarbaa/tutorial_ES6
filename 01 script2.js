@@ -78,3 +78,13 @@ sortBy = (sortType = "Name", users) => {
 
 sortBy(); // OutPut Sorting By:  Name
 sortBy("Date", []); // OutPut Sorting By:  Date
+
+/**
+ * Iterating
+ */
+
+let fruits = ["apple", "banana", "orange", "cherries", "jackfruit", "guava"];
+console.log("For Loop:");
+for (let index = 0; index < fruits.length; index++) {
+  console.log(fruits[index]);
+}

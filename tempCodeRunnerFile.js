@@ -1,2 +1,1 @@
-let output = getFullName();
-console.log(output);
+Default Parameters

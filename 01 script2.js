@@ -67,3 +67,14 @@ getFullNameShorter = (firstName, lastName) =>
 
 console.log("Shorted Example");
 getFullNameShorter(firstName, lastName);
+
+/**
+ * Default Parameters
+ */
+
+sortBy = (sortType = "Name", users) => {
+  console.log("Sorting By: ", sortType);
+};
+
+sortBy(); // OutPut Sorting By:  Name
+sortBy("Date", []); // OutPut Sorting By:  Date

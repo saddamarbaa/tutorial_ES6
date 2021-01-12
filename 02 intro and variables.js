@@ -36,7 +36,18 @@
   - Block Scope
   - Cannot Be Redeclare
   - Reference Error When Accessing A Variable Before It's Declared
-  - Does Not Create Properties in The Window Object
+		- Does Not Create Properties in The Window Object
+
+			-- 1997 -  ES1
+			-- 1998 -  ES2
+			-- 1999 -  ES3
+
+			-- 2009 -  ES5
+			-- 2015 -  ES6
+			-- 2016 -  ES7
+			-- 2017 -  ES8
+			-- 2018 -  ES9
+			-- 2019 -  ES10
 */
 
 const PI = 3.14;

@@ -182,3 +182,27 @@ let [newStudent, seStudent] = Student;
 console.log(newStudent);
 
 seStudent({ firstStudent: "adam", secondStudent: "amman" });
+
+/*
+   JavaScript Callbacks
+*/
+
+let logCall = function () {
+  console.log("locCall was called back");
+};
+
+/// call after 3 second
+setTimeout(logCall, 3000);
+
+/// call after 5 second
+//  call back
+setTimeout(function () {
+  console.log("the function was called");
+}, 3000);
+
+/// call after 6 second
+//  call back
+
+setTimeout(() => {
+  console.log("the function was called");
+}, 3000);

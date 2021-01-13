@@ -157,3 +157,28 @@ const { id, is_verified } = user;
 
 console.log(id); // 2
 console.log(is_verified); // true
+
+let full_Name = {
+  first_Name: "Saddam",
+  last_Name: "Arbaa",
+};
+
+let { first_Name, last_Name } = full_Name;
+
+console.log(first_Name);
+console.log(last_Name);
+
+let Student = [
+  {
+    firstStudent: "Saddam",
+    secondStudent: "Arbaa",
+  },
+  (Student) => {
+    console.log("I set the Student: ", Student);
+  },
+];
+
+let [newStudent, seStudent] = Student;
+console.log(newStudent);
+
+seStudent({ firstStudent: "adam", secondStudent: "amman" });

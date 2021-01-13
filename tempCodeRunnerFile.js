@@ -1,4 +1,3 @@
-console.log("Map:");
-newFruits = fruits.map((fruit) => {
-  console.log(fruit);
-});
+[a, b, ...rest] = [10, 20, 30, 40, 50];
+
+console.log(rest);

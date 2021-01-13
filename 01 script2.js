@@ -145,3 +145,15 @@ const [red, yellow, green] = foo;
 console.log(red); // "one"
 console.log(yellow); // "two"
 console.log(green); // "three"
+
+// Object destructuring
+
+const user = {
+  id: 2,
+  is_verified: true,
+};
+
+const { id, is_verified } = user;
+
+console.log(id); // 2
+console.log(is_verified); // true

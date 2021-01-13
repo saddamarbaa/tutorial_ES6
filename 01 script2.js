@@ -191,16 +191,17 @@ let logCall = function () {
   console.log("locCall was called back");
 };
 
-/// call after 3 second
+// call after 3 second
+
 setTimeout(logCall, 3000);
 
-/// call after 5 second
+// call after 5 second
 //  call back
 setTimeout(function () {
   console.log("the function was called");
 }, 3000);
 
-/// call after 6 second
+// call after 6 second
 //  call back
 
 setTimeout(() => {
